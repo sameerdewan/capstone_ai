@@ -10,8 +10,9 @@ This project analyzes customer churn in a telecommunications company using machi
 - **Size:** 7,043 customer records with 21 features
 - **Features:** Demographics, account information, and service subscriptions
 
-## Jupyter Notebook
-📓 **[View the Analysis Notebook](churn_analysis.ipynb)**
+## Reports & Analysis
+📊 **[Business Report (Nontechnical)](REPORT.md)** - Executive summary and recommendations for stakeholders  
+📓 **[Technical Analysis Notebook](churn_analysis.ipynb)** - Full data science workflow with code
 
 ## Summary of Findings
 
@@ -22,7 +23,7 @@ This project analyzes customer churn in a telecommunications company using machi
 | Random Forest | **76.86%** | 70.32% | 0.8367 |
 | Gradient Boosting | 74.95% | 73.53% | 0.8353 |
 
-All models achieved the target accuracy of 75-80%, with Logistic Regression providing the best recall for identifying churners.
+Random Forest achieved the highest accuracy (76.86%), while Logistic Regression provides the best recall (78.34%) for identifying churners.
 
 ### Top 7 Key Factors Influencing Churn
 1. **Contract Type** (importance: 0.2121) - Month-to-month: 42.7% churn vs Two-year: 2.8%
@@ -50,9 +51,19 @@ All models achieved the target accuracy of 75-80%, with Logistic Regression prov
 ## Project Structure
 ```
 capstone_ai/
-├── churn_analysis.ipynb    # Main analysis notebook
+├── churn_analysis.ipynb    # Main technical analysis notebook
+├── REPORT.md               # Nontechnical business report (with visuals)
 ├── README.md               # This file
-├── INITIAL.md               # Original project proposal
+├── INITIAL.md              # Original project proposal
+├── requirements.txt        # Python dependencies
+├── generate_images.py      # Script to regenerate report visualizations
+└── images/                 # Visualizations for the report
+    ├── CHURN_DISTRIBUTION.png
+    ├── CHURN_BY_CATEGORICAL_FEATURES.png
+    ├── CHURN_BY_TENURE.png
+    ├── CONFUSION_MATRICES.png
+    ├── ROC_CURVES.png
+    └── FEATURE_IMPORTANCE_BY_CATEGORY.png
 ```
 
 ## Requirements
